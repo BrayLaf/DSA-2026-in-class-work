@@ -16,13 +16,14 @@ import org.junit.jupiter.api.Test;
  */
 class RectangleTest {
 	
-	Rectangle obj = new Rectangle();
+	static Rectangle obj;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		obj = new Rectangle();
 	}
 
 	/**
@@ -47,10 +48,15 @@ class RectangleTest {
 	}
 
 	@Test
-	void test() {
-		int expected = 15;
-		int actualVal = obj.area(5,3);
-		assertEquals(expected, actualVal);
+	void test_area1() {
+		assertEquals(15, obj.area(5, 3));
 	}
-
+	@Test
+	void test_area2() {
+		assertEquals(100, obj.area(10, 10));
+	}
+	@Test
+	void test_area3() {
+		assertEquals(30, obj.area(6, 5));
+	}
 }
