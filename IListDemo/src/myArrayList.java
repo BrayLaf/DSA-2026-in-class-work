@@ -67,7 +67,7 @@ public class myArrayList implements IList {
 				maxSize = newSize;
 			}
 		}
-		return 0;
+		return val;
 	}
 
 	@Override
